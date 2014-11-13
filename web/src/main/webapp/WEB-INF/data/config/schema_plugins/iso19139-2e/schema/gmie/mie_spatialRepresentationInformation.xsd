@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gmi="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi" 
+xmlns:gml="http://www.opengis.net/gml" xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gco="http://www.isotc211.org/2005/gco"
+xmlns:gmie="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmie"
+targetNamespace="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmie" elementFormDefault="qualified" version="0.1">
+		<!-- ================================= Annotation ================================ -->
+	<xs:annotation>
+		<xs:documentation>This file was created by Innerebner Markus and Ekaterina Chuprikova</xs:documentation>
+	</xs:annotation>
+	<!-- ================================== Imports ================================== -->
+	<xs:import namespace="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi" schemaLocation="../../../iso19139-2/schema/gmi/gmi.xsd"/>
+	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../../../iso19139/schema/gmd/gmd.xsd"/>
+	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="../../../iso19139/schema/gco/gco.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="../../../iso19139/schema/gml/gml.xsd"/>
+	<!-- ########################################################################### -->
+	<!-- ########################################################################### -->
+	<!-- ================================== Classes ================================ -->
+	<!-- =========================================================================== -->
+	<xs:complexType name="MIE_Georectified_Type">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gmi:MI_Georectified_Type">
+				<xs:sequence>
+					<xs:element name="orientationParameterDescription" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_Georectified" type="gmie:MIE_Georectified_Type" substitutionGroup="gmi:MI_Georectified"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MIE_Georectified_PropertyType">
+		<xs:sequence>
+			<xs:element ref="gmie:MIE_Georectified"  minOccurs="0"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ====================================================================================== -->
+</xs:schema>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmie" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+	xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmi="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi" xmlns:gmie="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmie"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.1">
+	<!-- ================================= Annotation ================================ -->
+	<xs:annotation>
+		<xs:documentation>This file was created by Innerebner Markus and Ekaterina Chuprikova ====== </xs:documentation>
+	</xs:annotation>
+	<!-- ================================== Imports ================================== -->
+	<xs:import namespace="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi" schemaLocation="../../../iso19139-2/schema/gmi/acquisitionInformation.xsd" />
+	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../../../iso19139/schema/gmd/gmd.xsd" />
+	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="../../../iso19139/schema/gco/gco.xsd" />
+	<xs:import namespace="http://www.isotc211.org/2005/gss" schemaLocation="../../../iso19139/schema/gss/gss.xsd" />
+	<!-- ########################################################################### -->
+	<!-- ########################################################################### -->
+	<!-- ================================== Classes ================================= -->
+
+	<xs:complexType name="MIE_AcquisitionInformation_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gmi:MI_AcquisitionInformation_Type">
+				<xs:sequence>
+					<xs:element name="productCharacteristics" type="gmie:MIE_ProductCharacteristics_PropertyType" minOccurs="0" />
+					<xs:element name="archivingInformation" type="gmie:MIE_ArchivingInformation_Type" minOccurs="0" />
+					<xs:element name="processingInformation" type="gmie:MIE_ProcessingInformation_Type" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_AcquisitionInformation" type="gmie:MIE_AcquisitionInformation_Type" substitutionGroup="gmi:AbstractMI_AcquisitionInformation" />
+	<!--....................................................................... -->
+	<xs:complexType name="MIE_AcquisitionInformation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmie:MIE_AcquisitionInformation" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="MIE_ProductCharacteristics_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="level" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="productLevel" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="dataAcquired" type="gco:Date_PropertyType" minOccurs="0" />
+			<xs:element name="sceneCenterTime" type="gco:DateTime_PropertyType" minOccurs="0" />
+			<xs:element name="dataType" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="dataCategory" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="dataStatus" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="fileTypeVersion" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="additionalFiles" type="gmie:MIE_AdditionalFiles_Type" minOccurs="0" />
+			<xs:element name="ancillaryData" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="ancillaryInputType" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="algorithmPackageMaturityCode" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="escVersion" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="incompleteScans" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="earthViewFrames" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="dayModeScans" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="averagedBlackBodyTemperature" type="gco:Real_PropertyType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_ProductCharacteristics" type="gmie:MIE_ProductCharacteristics_Type"/>
+	<!--....................................................................... -->
+	<xs:complexType name="MIE_ProductCharacteristics_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmie:MIE_ProductCharacteristics" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="MIE_ArchivingInformation_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="archivingCenter" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="archivingDate" type="gco:DateTime_PropertyType" minOccurs="0" />
+			<xs:element name="archivingIdentifier" type="gco:CharacterString_PropertyType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_ArchivingInformation" type="gmie:MIE_ArchivingInformation_Type" />
+	<!--....................................................................... -->
+	<xs:complexType name="MIE_ArchivingInformation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmie:MIE_ArchivingInformation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="MIE_ProcessingInformation_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="processingSoftwareVersion" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="processDescription" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="processingCenter" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="reprocessingStatus" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="resamplingOption" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="scanGapInterpolation" type="gco:Real_PropertyType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_ProcessingInformation" type="gmie:MIE_ProcessingInformation_Type" />
+	<!--....................................................................... -->
+	<xs:complexType name="MIE_ProcessingInformation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmie:MIE_ProcessingInformation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="MIE_Operation_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gmi:MI_Operation_Type">
+				<xs:sequence>
+					<xs:element name="receivingStationID" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="elevationSource" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="ephemerisType" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="nadirOffnadir" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="incidenceAngle" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="azimuthAngle" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="earthSunDistance" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="dayNightFlag" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="productionTime" type="gco:DateTime_PropertyType" minOccurs="0" />
+					<xs:element name="rollAngle" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="orbitDirection" type="gmie:MIE_OrbitDirection_Type" minOccurs="0" />
+					<!-- ===equatorCrossingTime could be changed for dateTime gco if the date is known=== -->
+					<xs:element name="equatorCrossingTime" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="spaceCraftViewAngle" type="gco:Real_PropertyType" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_Operation" type="gmie:MIE_Operation_Type" substitutionGroup="gmi:MI_Operation" />
+	<!--....................................................................... -->
+	<xs:complexType name="MIE_Operation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmie:MIE_Operation" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- =========================================================================== -->
+		<xs:simpleType name="MIE_OrbitDirection_Type">
+		<xs:annotation>
+			<xs:documentation>The direction in which the satellite is moving. Ascending meens from south to north and Descending from north to south.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ascending" />
+			<xs:enumeration value="Descending" />
+			<xs:enumeration value="N/A" />
+		</xs:restriction>
+	</xs:simpleType>
+<!-- =========================================================================== -->
+	<xs:complexType name="MIE_Instrument_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gmi:MI_Instrument_Type">
+				<xs:sequence>
+					<xs:element name="sensorScanningSystemType" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="resolution" type="gco:Distance_PropertyType" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_Instrument" type="gmie:MIE_Instrument_Type" substitutionGroup="gmi:MI_Instrument" />
+	<!-- =========================================================================== -->
+	<xs:complexType name="MIE_Platform_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gmi:MI_Platform_Type">
+				<xs:sequence>
+					<xs:element name="platformName" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="orbitType" type="gco:CharacterString_PropertyType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_Platform" type="gmie:MIE_Platform_Type" substitutionGroup="gmi:MI_Platform" />
+	<!-- =========================================================================== -->
+	<xs:complexType name="MIE_AdditionalFiles_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="calibrationFilename" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="fileNameBandQuality" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="maskFileName" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<!-- productInputFiles for modis. Former AdditionalFiles -->
+			<xs:element name="productInputFiles" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="bpfNameOLI" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="bpfNameTIRS" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="rlutFileName" type="gco:CharacterString_PropertyType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_AdditionalFiles" type="gmie:MIE_AdditionalFiles_Type" />
+	<!-- =========================================================================== -->
+
+</xs:schema>
+	
+	

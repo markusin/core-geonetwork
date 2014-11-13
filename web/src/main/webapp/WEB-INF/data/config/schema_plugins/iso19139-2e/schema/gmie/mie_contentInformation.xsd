@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmie" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+	xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmi="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi" xmlns:gmie="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmie"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.1">
+	<xs:annotation>
+		<xs:documentation>This file was created by Innerebner Markus and Ekaterina Chuprikova ====== </xs:documentation>
+	</xs:annotation>
+	<!-- ================================== Imports ================================== -->
+	<xs:import namespace="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi" schemaLocation="../../../iso19139-2/schema/gmi/contentInformation.xsd" />
+	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../../../iso19139/schema/gmd/content.xsd" />
+	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="../../../iso19139/schema/gco/gco.xsd" />
+	<!-- ########################################################################### -->
+	<!-- ########################################################################### -->
+	<!-- ================================== Classes ================================= -->
+	<xs:complexType name="MIE_ImageDescription_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gmi:MI_ImageDescription_Type">
+				<xs:sequence>
+					<xs:element name="tileID" type="gco:Integer_PropertyType" minOccurs="0" />
+					<xs:element name="groundControlPointsModel" type="gco:Integer_PropertyType" minOccurs="0" />
+					<xs:element name="cloudCoverPercentageAssesmentConfidence" type="gco:Integer_PropertyType" minOccurs="0" />
+					<xs:element name="cloudCoverPercentageQuotationMode" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<!-- better to move usableDataPercentage to quality information -->
+					<xs:element name="usableDataPercentage" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="correctionParameters" type="gmie:MIE_CorrectionParameters_PropertyType" minOccurs="0" />
+					<xs:element name="maskInfo" type="gmie:MIE_MaskInformation_PropertyType" minOccurs="0" />
+					<xs:element name="pixelFormat" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="versionISD" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="imageGeometry" type="gmie:MIE_ImageGeometry_PropertyType" minOccurs="0" />
+					<xs:element name="licenseInfo" type="gmie:MIE_License_PropertyType" minOccurs="0" />
+					<xs:element name="missingData" type="gco:Integer_PropertyType" minOccurs="0" />
+					<xs:element name="bandInfo" type="gmie:MIE_BandCharacteristics_PropertyType" minOccurs="0" />
+					<xs:element name="calibrationInfo" type="gmie:MIE_CalibrationInformation_PropertyType" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_ImageDescription" type="gmie:MIE_ImageDescription_Type" substitutionGroup="gmd:MD_CoverageDescription" />
+	<!--....................................................................... -->
+	<xs:complexType name="MIE_ImageDescription_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmie:MIE_ImageDescription" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="MIE_License_Type">
+		<xs:complexContent>
+			<xs:extension base="gco:AbstractObject_Type">
+				<xs:sequence>
+					<xs:element name="licenseType" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="licenseLink" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="orderID" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="description" type="gco:CharacterString_PropertyType" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MIE_License" type="gmie:MIE_License_Type" />
+	<!-- ........................................................................ -->
+	<xs:complexType name="MIE_License_PropertyType">
+		<xs:sequence>
+			<xs:element ref="gmie:MIE_License" minOccurs="0" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- ====================================================================================== -->
+	<xs:complexType name="MIE_ImageGeometry_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="imageSize" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="numberOfRows" type="gco:Real_PropertyType" minOccurs="0" />
+			<xs:element name="numberOfColumns" type="gco:Real_PropertyType" minOccurs="0" />
+			<xs:element name="groundSampleDistanceInRow" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="groundSampleDistanceInColumn" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="rowsProjectedGrid" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="columnsProjectedGrid" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="imageCenterX" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="imageCenterY" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="numberOfBands" type="gco:Integer_PropertyType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_ImageGeometry" type="gmie:MIE_ImageGeometry_Type" />
+	<!--....................................................................... -->
+	<xs:complexType name="MIE_ImageGeometry_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmie:MIE_ImageGeometry" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- ====================================================================================== -->
+	<xs:complexType name="MIE_CorrectionParameters_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="geoCorrectionLevel" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="elevationCorrectionApplied" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="roughTerrainCorrection" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="brdfCorrection" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="atmosphericCorrectionParameters" type="gmie:MIE_AtmosphericCorrectionParameters_PropertyType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_CorrectionParameters" type="gmie:MIE_CorrectionParameters_Type" />
+	<!--....................................................................... -->
+	<xs:complexType name="MIE_CorrectionParameters_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmie:MIE_CorrectionParameters" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- ====================================================================================== -->
+	<xs:complexType name="MIE_AtmosphericCorrectionParameters_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="atmosphericCorrectionApplied" type="gco:Boolean_PropertyType" minOccurs="0" />
+			<xs:element name="autoVisibility" type="gco:Boolean_PropertyType" minOccurs="0" />
+			<xs:element name="visibility" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="aerosolType" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="waterVapor" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="hazeRemoval" type="gco:Boolean_PropertyType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_AtmosphericCorrectionParameters" type="gmie:MIE_AtmosphericCorrectionParameters_Type" />
+	<!--....................................................................... -->
+	<xs:complexType name="MIE_AtmosphericCorrectionParameters_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmie:MIE_AtmosphericCorrectionParameters" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- ====================================================================================== -->
+	<xs:complexType name="MIE_MaskInformation_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="maskAvailability" type="gco:Boolean_PropertyType" minOccurs="0" />
+			<xs:element name="type" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="description" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="projection" type="gmd:RS_Identifier_PropertyType" minOccurs="0" />
+			<xs:element name="maskFileName" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="cloudMask" type="gco:CharacterString_PropertyType" minOccurs="0" />
+			<xs:element name="shadowMask" type="gco:CharacterString_PropertyType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_MaskInformation" type="gmie:MIE_MaskInformation_Type" />
+	<!--....................................................................... -->
+	<xs:complexType name="MIE_MaskInformation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmie:MIE_MaskInformation" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- ====================================================================================== -->
+	<xs:complexType name="MIE_BandCharacteristics_Type">
+		<xs:complexContent>
+			<xs:extension base="gco:AbstractObject_Type">
+				<xs:sequence>
+					<xs:element name="panchromaticBand" type="gmie:MIE_PanchromaticBand_PropertyType" minOccurs="0" />
+					<xs:element name="thermalBand" type="gmie:MIE_ThermalBand_PropertyType" minOccurs="0" />
+					<xs:element name="reflectiveBand" type="gmie:MIE_ReflectiveBand_PropertyType" minOccurs="0" />
+					<xs:element name="emissiveBand" type="gmie:MIE_EmissiveBand_PropertyType" minOccurs="0" />
+					<xs:element name="fileNameBandQuality" type="gco:CharacterString_PropertyType" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MIE_BandCharacteristics" type="gmie:MIE_BandCharacteristics_Type" />
+	<!-- ........................................................................ -->
+	<xs:complexType name="MIE_BandCharacteristics_PropertyType">
+		<xs:sequence>
+			<xs:element ref="gmie:MIE_BandCharacteristics" minOccurs="0" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- ====================================================================================== -->
+	<xs:complexType name="MIE_PanchromaticBand_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="panchromaticLines" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="panchromaticSamples" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="resolution" type="gco:Distance_PropertyType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_PanchromaticBand" type="gmie:MIE_PanchromaticBand_Type" />
+	<!-- ........................................................................ -->
+	<xs:complexType name="MIE_PanchromaticBand_PropertyType">
+		<xs:sequence>
+			<xs:element ref="gmie:MIE_PanchromaticBand" minOccurs="0" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="MIE_ThermalBand_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="thermalLines" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="thermalSamples" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="resolution" type="gco:Distance_PropertyType" minOccurs="0" />
+			<xs:element name="thermalConstant1Band10" type="gco:Real_PropertyType" minOccurs="0" />
+			<xs:element name="thermalConstant1Band11" type="gco:Real_PropertyType" minOccurs="0" />
+			<xs:element name="thermalConstant2Band10" type="gco:Real_PropertyType" minOccurs="0" />
+			<xs:element name="thermalConstant2Band11" type="gco:Real_PropertyType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_ThermalBand" type="gmie:MIE_ThermalBand_Type" />
+	<!-- ........................................................................ -->
+	<xs:complexType name="MIE_ThermalBand_PropertyType">
+		<xs:sequence>
+			<xs:element ref="gmie:MIE_ThermalBand" minOccurs="0" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="MIE_ReflectiveBand_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="reflectiveLines" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="reflectiveSamples" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="resolution" type="gco:Distance_PropertyType" minOccurs="0" />
+			<xs:element name="reflectiveBandsWithBadData" type="gco:CharacterString_PropertyType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_ReflectiveBand" type="gmie:MIE_ReflectiveBand_Type" />
+		<!-- ........................................................................ -->
+	<xs:complexType name="MIE_ReflectiveBand_PropertyType">
+		<xs:sequence>
+			<xs:element ref="gmie:MIE_ReflectiveBand" minOccurs="0" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="MIE_EmissiveBand_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="emissiveLines" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="emissiveSamples" type="gco:Integer_PropertyType" minOccurs="0" />
+			<xs:element name="resolution" type="gco:Distance_PropertyType" minOccurs="0" />
+			<xs:element name="emissiveBandsWithBadData" type="gco:CharacterString_PropertyType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_EmissiveBand" type="gmie:MIE_EmissiveBand_Type" />
+	<!-- ........................................................................ -->
+	<xs:complexType name="MIE_EmissiveBand_PropertyType">
+		<xs:sequence>
+			<xs:element ref="gmie:MIE_EmissiveBand" minOccurs="0" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="MIE_Band_Type">
+		<xs:annotation>
+			<xs:documentation />
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gmi:MI_Band_Type">
+				<xs:sequence>
+					<xs:element name="radianceLMAX" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="radianceLMIN" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="reflectanceMAX" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="reflectanceMIN" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="calibratedPixelValueMAX" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="calibratedPixelValueMIN" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="correctionGainBand" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="correctionBiasBand" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="gainBand" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="gainChangeBand" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="gainChangeScanBand" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="radianceMulti" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="radianceAdd" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="reflectanceMulti" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="reflectanceAdd" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="extent" type="gmd:EX_Extent_PropertyType" minOccurs="0" />
+					<xs:element name="percentMissingLines" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="suspectMissingLines" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="missingValue" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="usableValue" type="gco:Real_PropertyType" minOccurs="0" />
+					<xs:element name="binning" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="shifting" type="gco:Integer_PropertyType" minOccurs="0" />
+					<xs:element name="masking" type="gco:Integer_PropertyType" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--....................................................................... -->
+	<xs:element name="MIE_Band" type="gmie:MIE_Band_Type" substitutionGroup="gmd:MD_RangeDimension" />
+	<!-- ........................................................................ -->
+	<xs:complexType name="MIE_Band_PropertyType">
+		<xs:sequence>
+			<xs:element ref="gmie:MIE_Band" minOccurs="0" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- ====================================================================================== -->
+	<xs:complexType name="MIE_CalibrationInformation_Type">
+		<xs:complexContent>
+			<xs:extension base="gco:AbstractObject_Type">
+				<xs:sequence>
+					<xs:element name="calibrationFilename" type="gco:CharacterString_PropertyType" minOccurs="0" />
+					<xs:element name="calibrationQuality" type="gco:CharacterString_PropertyType" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MIE_CalibrationInformation" type="gmie:MIE_CalibrationInformation_Type" />
+	<!-- ........................................................................ -->
+	<xs:complexType name="MIE_CalibrationInformation_PropertyType">
+		<xs:sequence>
+			<xs:element ref="gmie:MIE_CalibrationInformation" minOccurs="0" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- ====================================================================================== -->
+</xs:schema>

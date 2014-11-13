@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmie" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+	xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmi="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi" xmlns:gmie="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmie"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.1">
+	<!-- ================================= Annotation ================================ -->
+	<xs:annotation>
+		<xs:documentation>This file was created by Innerebner Markus and Ekaterina Chuprikova</xs:documentation>
+	</xs:annotation>
+	<!-- ================================== Imports ================================== -->
+	<xs:import namespace="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi" schemaLocation="../../../iso19139-2/schema/gmi/gmi.xsd" />
+	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../../../iso19139/schema/gmd/gmd.xsd" />
+	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="../../../iso19139/schema/gco/gco.xsd" />
+	<!-- ================================== Includes ================================== -->
+	<xs:include schemaLocation="../gmie/mie_acquisitionInformation.xsd" />
+	<xs:include schemaLocation="../gmie/mie_contentInformation.xsd" />
+	<xs:include schemaLocation="../gmie/mie_spatialRepresentationInformation.xsd" />
+	<xs:include schemaLocation="../gmie/mie_referenceSystemInformation.xsd" />
+	<xs:include schemaLocation="../gmie/mie_identificationInformation.xsd" />
+	<!-- ########################################################################### -->
+	<!-- ########################################################################### -->
+	<!-- ================================== Classes ================================= -->
+	<!-- ================================== Classes ================================= -->
+	<xs:complexType name="MIE_Metadata_Type">
+		<xs:annotation>
+			<xs:documentation>Description: Root entity that defines information about imagery or gridded data - shortName: IMetadata
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gmi:MI_Metadata_Type"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MIE_Metadata" type="gmie:MIE_Metadata_Type" substitutionGroup="gmi:MI_Metadata" />
+	<!-- ........................................................................ -->
+	<xs:complexType name="MI_Metadata_PropertyType">
+		<xs:sequence>
+			<xs:element ref="gmi:MI_Metadata" minOccurs="0" />
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference" />
+		<xs:attribute ref="gco:nilReason" />
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	
+	
+</xs:schema>
