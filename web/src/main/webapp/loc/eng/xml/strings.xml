@@ -342,6 +342,7 @@
 	<about>About</about>
 	<abstract>Abstract</abstract>
 	<accept>Accept</accept>
+	<acquisitionInfoTab>Acquisition Info</acquisitionInfoTab> <!-- RT#53364 -->
 	<actionOnSelect>actions on selection</actionOnSelect>
 	<add js="true">add</add>
 	<addNewMetadata>Add new metadata</addNewMetadata>
@@ -353,7 +354,6 @@
 	<any>- Any -</any>
 	<anytime>Anytime</anytime>
 	<appSchInfoTab>App. schema</appSchInfoTab>
-
 	<assigned>Assigned</assigned>
 	<attrlabl>Attribute Label</attrlabl>
 	<availability>Availability</availability>

@@ -150,6 +150,11 @@
 		
 		<xsl:variable name="currTab" select="/root/gui/currTab"/>
 	
+		<xsl:message>Tab is: <xsl:value-of select="$currTab"/> </xsl:message>
+		<xsl:message>Text is: <xsl:value-of select="$text"/> </xsl:message>
+		<xsl:message>Tablink is: <xsl:value-of select="$tabLink"/> </xsl:message>
+		
+		
 	  <tr>
 	    <xsl:attribute name="class">
 	      <xsl:choose>
