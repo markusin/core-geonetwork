@@ -12,10 +12,8 @@
 	     we used http://www.isotc211.org/2005/srv so remap opengis.net to
 			 that so all our stuff continues to work -->
 
-	<uri name="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmie
-				uri="schema/gmie/gmie.xsd"/>
-	<uri name="http://schemas.opengis.net/iso/19139/20060504/srv/srv.xsd"
-					uri="http://www.isotc211.org/2005/srv"/>
+	<uri name="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmie" uri="schema/gmie/gmie.xsd"/>
+	<uri name="http://schemas.opengis.net/iso/19139/20060504/srv/srv.xsd" uri="http://www.isotc211.org/2005/srv"/>
 
 	<!-- These are to map schemaLocation hints to local schemas to make sure that
        GeoNetwork edits and validates against a schema it knows about. -->

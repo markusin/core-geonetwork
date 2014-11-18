@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" 
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:gmd="http://www.isotc211.org/2005/gmd"
-	xmlns:gts="http://www.isotc211.org/2005/gts" 
+	xmlns:gts="http://www.isotc211.org/2005/gts"
 	xmlns:gco="http://www.isotc211.org/2005/gco"
-	xmlns:gmi="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi" 
-	xmlns:gmx="http://www.isotc211.org/2005/gmx" 
+	xmlns:gmi="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi"
+	xmlns:gmx="http://www.isotc211.org/2005/gmx"
 	xmlns:srv="http://www.isotc211.org/2005/srv"
-	xmlns:gml="http://www.opengis.net/gml" 
-	xmlns:xlink="http://www.w3.org/1999/xlink" 
-	xmlns:geonet="http://www.fao.org/geonetwork" 
+	xmlns:gml="http://www.opengis.net/gml"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:geonet="http://www.fao.org/geonetwork"
 	xmlns:exslt="http://exslt.org/common"
 	exclude-result-prefixes="gmd gco gml gts srv xlink exslt geonet">
 
-	<xsl:include href="metadata-fop.xsl" />
-	
 	<!-- main template - the way into processing iso19139-2 -->
 	<xsl:template name="metadata-iso19139-2">
 		<xsl:param name="schema"/>
@@ -33,7 +31,7 @@
 	<xsl:template name="iso19139-2CompleteTab">
 		<xsl:param name="tabLink" />
 		<xsl:param name="schema" />
-		
+
 		<!-- INSPIRE tab -->
 		<xsl:if test="/root/gui/env/inspire/enable = 'true' and /root/gui/env/metadata/enableInspireView = 'true'">
 			<xsl:call-template name="displayTab">
@@ -210,7 +208,7 @@
 				</xsl:if>
 			</td>
 		</tr>
-		
+
 		<xsl:choose>
 
 			<!-- metadata tab -->
@@ -326,7 +324,7 @@
 				</xsl:apply-templates>
 			</xsl:when>
 
-			<!-- ISOMinimum tab -->			
+			<!-- ISOMinimum tab -->
 			<xsl:when test="$currTab='ISOMinimum'">
 				<xsl:call-template name="inspiretabs">
 					<xsl:with-param name="schema" select="$schema" />
@@ -372,14 +370,14 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-	
-	
+
+
 	<!-- Brief template -->
 	<xsl:template name="iso19139-2Brief">
 		<xsl:call-template name="iso19139Brief" />
 	</xsl:template>
 
-	
+
 	<xsl:template name="iso19139-2-javascript" />
 
 </xsl:stylesheet>
