@@ -32,7 +32,9 @@
 		<xsl:param name="embedded" />
 
 		<xsl:variable name="schemaTemplate" select="concat('metadata-',$schema)"/>
+		<!--
 		<xsl:message>Calling MD template <xsl:value-of select="$schemaTemplate"/> with element:  <xsl:value-of select="name()"/> </xsl:message>
+		-->
 		
 		<saxon:call-template name="{$schemaTemplate}"> 
 			<xsl:with-param name="schema" select="$schema"/>

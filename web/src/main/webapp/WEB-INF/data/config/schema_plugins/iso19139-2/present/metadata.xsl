@@ -29,8 +29,7 @@
 		</xsl:apply-templates>
 	</xsl:template>
 
-	<!-- RT#53364 InM begin -->
-	<!-- Enables in the left tab to show acquisition information -->
+	<!-- RT#53364: the entire template has to be rewritten from iso19139, plus adding the part for the acquisitioninfo -->
 	<xsl:template name="iso19139-2CompleteTab">
 		<xsl:param name="tabLink" />
 		<xsl:param name="schema" />
@@ -176,11 +175,14 @@
 	<!-- RT#53364 InM end -->
 	
 	
+	<!-- 53364 -->
 	<!-- Redirection template for profil gmi in order to process extraTabs. -->
-	<xsl:template mode="iso19139" match="gmi:MI_Metadata|*[@gco:isoType='gmd:MD_Metadata']" priority="2">
+	<xsl:template mode="iso19139" match="gmi:MI_Metadata" priority="200">
 		<xsl:param name="schema" />
 		<xsl:param name="edit" />
 		<xsl:param name="embedded" />
+		
+		<xsl:message>------ Current tab is <xsl:value-of select="$currTab"/></xsl:message>
 
 		<xsl:variable name="dataset"
 			select="gmd:hierarchyLevel/gmd:MD_ScopeCode/@codeListValue='dataset' or normalize-space(gmd:hierarchyLevel/gmd:MD_ScopeCode/@codeListValue)=''" />
@@ -209,8 +211,6 @@
 			</td>
 		</tr>
 		
-		<xsl:message>------ Current tab is <xsl:value-of select="$currTab"/></xsl:message>
-
 		<xsl:choose>
 
 			<!-- metadata tab -->
@@ -376,8 +376,9 @@
 	
 	<!-- Brief template -->
 	<xsl:template name="iso19139-2Brief">
-		<xsl:call-template name="iso19139-brief" />
+		<xsl:call-template name="iso19139Brief" />
 	</xsl:template>
+
 	
 	<xsl:template name="iso19139-2-javascript" />
 

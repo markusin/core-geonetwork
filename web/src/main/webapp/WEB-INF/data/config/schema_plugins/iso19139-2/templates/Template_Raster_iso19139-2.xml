@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmi:MI_Metadata xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmi="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gml="http://www.opengis.net/gml" xmlns:gmd="http://www.isotc211.org/2005/gmd" gco:isoType="gmd:MD_Metadata" xsi:schemaLocation="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi/gmi.xsd">
+	<gmd:fileIdentifier>
+
+		<gco:CharacterString>dc08cac3-0895-4e06-863a-592e38d46ffe</gco:CharacterString>
+
+	</gmd:fileIdentifier>
+	<gmd:language>
+
+		<gmd:LanguageCode xmlns:gmx="http://www.isotc211.org/2005/gmx" codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng"/>
+
+	</gmd:language>
+	<gmd:characterSet>
+
+		<gmd:MD_CharacterSetCode codeListValue="utf8" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_CharacterSetCode"/>
+
+	</gmd:characterSet>
+	<gmd:hierarchyLevel>
+
+		<gmd:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset"/>
+
+	</gmd:hierarchyLevel>
+	<gmd:contact>
+
+		<gmd:CI_ResponsibleParty>
+
+			<gmd:individualName>
+
+				<gco:CharacterString>Your Name</gco:CharacterString>
+
+			</gmd:individualName>
+			<gmd:organisationName>
+
+				<gco:CharacterString>Institute for Applied Remote Sensing, EURAC research</gco:CharacterString>
+
+			</gmd:organisationName>
+			<gmd:positionName>
+
+				<gco:CharacterString>Researcher</gco:CharacterString>
+
+			</gmd:positionName>
+			<gmd:contactInfo>
+
+				<gmd:CI_Contact>
+
+					<gmd:phone>
+
+						<gmd:CI_Telephone/>
+
+					</gmd:phone>
+					<gmd:address>
+
+						<gmd:CI_Address>
+
+							<gmd:deliveryPoint>
+
+								<gco:CharacterString>Viale Druso, 1 / Drususallee 1, EURAC research</gco:CharacterString>
+
+							</gmd:deliveryPoint>
+							<gmd:city>
+
+								<gco:CharacterString>Bolzano</gco:CharacterString>
+
+							</gmd:city>
+							<gmd:administrativeArea>
+
+								<gco:CharacterString>Autonomous Province of Bolzano</gco:CharacterString>
+
+							</gmd:administrativeArea>
+							<gmd:postalCode>
+
+								<gco:CharacterString>39100</gco:CharacterString>
+
+							</gmd:postalCode>
+							<gmd:country>
+
+								<gco:CharacterString>Italy</gco:CharacterString>
+
+							</gmd:country>
+							<gmd:electronicMailAddress>
+
+								<gco:CharacterString>remote.sensing@eurac.edu</gco:CharacterString>
+
+							</gmd:electronicMailAddress>
+
+						</gmd:CI_Address>
+
+					</gmd:address>
+					<gmd:onlineResource>
+
+						<gmd:CI_OnlineResource>
+
+							<gmd:linkage>
+
+								<gmd:URL>http://www.eurac.edu/en/research/institutes/remotesensing/default.html</gmd:URL>
+
+							</gmd:linkage>
+							<gmd:protocol>
+
+								<gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+
+							</gmd:protocol>
+							<gmd:applicationProfile>
+
+								<gco:CharacterString>remote sensing</gco:CharacterString>
+
+							</gmd:applicationProfile>
+							<gmd:name>
+
+								<gco:CharacterString>EURAC research</gco:CharacterString>
+
+							</gmd:name>
+							<gmd:function>
+
+								<gmd:CI_OnLineFunctionCode codeList="" codeListValue="information"/>
+
+							</gmd:function>
+
+						</gmd:CI_OnlineResource>
+
+					</gmd:onlineResource>
+
+				</gmd:CI_Contact>
+
+			</gmd:contactInfo>
+			<gmd:role>
+
+				<gmd:CI_RoleCode codeListValue="pointOfContact" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_RoleCode"/>
+
+			</gmd:role>
+
+		</gmd:CI_ResponsibleParty>
+
+	</gmd:contact>
+	<gmd:dateStamp>
+
+		<gco:DateTime xmlns:gmx="http://www.isotc211.org/2005/gmx">2014-11-11T16:41:39</gco:DateTime>
+
+	</gmd:dateStamp>
+	<gmd:referenceSystemInfo>
+
+		<gmd:MD_ReferenceSystem>
+
+			<gmd:referenceSystemIdentifier>
+
+				<gmd:RS_Identifier>
+
+					<gmd:code>
+
+						<gco:CharacterString>WGS 1984</gco:CharacterString>
+
+					</gmd:code>
+
+				</gmd:RS_Identifier>
+
+			</gmd:referenceSystemIdentifier>
+
+		</gmd:MD_ReferenceSystem>
+
+	</gmd:referenceSystemInfo>
+	<gmd:identificationInfo>
+
+		<gmd:MD_DataIdentification>
+
+			<gmd:citation>
+
+				<gmd:CI_Citation>
+
+					<gmd:title xsi:type="gmd:PT_FreeText_PropertyType">
+
+						<gco:CharacterString>Template ISO19139-2 for repository Raster data</gco:CharacterString>
+
+					</gmd:title>
+					<gmd:alternateTitle>
+
+						<gco:CharacterString>Template ISO19139-2 for repository Raster data</gco:CharacterString>
+
+					</gmd:alternateTitle>
+					<gmd:date>
+
+						<gmd:CI_Date>
+
+							<gmd:date>
+
+								<gco:DateTime>2014-01-10T00:00:00</gco:DateTime>
+
+							</gmd:date>
+							<gmd:dateType>
+
+								<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_DateTypeCode"/>
+
+							</gmd:dateType>
+
+						</gmd:CI_Date>
+
+					</gmd:date>
+					<gmd:edition gco:nilReason="missing">
+
+						<gco:CharacterString/>
+
+					</gmd:edition>
+					<gmd:identifier>
+
+						<gmd:RS_Identifier>
+
+							<gmd:code>
+
+								<gco:CharacterString>filename</gco:CharacterString>
+
+							</gmd:code>
+							<gmd:codeSpace>
+
+								<gco:CharacterString>storage</gco:CharacterString>
+
+							</gmd:codeSpace>
+
+						</gmd:RS_Identifier>
+
+					</gmd:identifier>
+					<gmd:presentationForm>
+
+						<gmd:CI_PresentationFormCode codeListValue="mapDigital" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_PresentationFormCode"/>
+
+					</gmd:presentationForm>
+
+				</gmd:CI_Citation>
+
+			</gmd:citation>
+			<gmd:abstract xsi:type="gmd:PT_FreeText_PropertyType">
+
+				<gco:CharacterString>The actual template is used for raster data that should be published within EURAC only and available via EURAC Geonetwork. This template is multilingual with a default language set to English Other language could be used to translate part of the metadata record. Main language is define in metadata section. Other languages could be added to metadata section / locale element. The ISO19115-2 metadata standard is the preferred metadata standard to use.</gco:CharacterString>
+
+			</gmd:abstract>
+			<gmd:purpose gco:nilReason="missing">
+
+				<gco:CharacterString/>
+
+			</gmd:purpose>
+			<gmd:status>
+
+				<gmd:MD_ProgressCode codeListValue="onGoing" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_ProgressCode"/>
+
+			</gmd:status>
+			<gmd:pointOfContact>
+
+				<gmd:CI_ResponsibleParty>
+
+					<gmd:individualName>
+
+						<gco:CharacterString>Your Name</gco:CharacterString>
+
+					</gmd:individualName>
+					<gmd:organisationName>
+
+						<gco:CharacterString>Institute for Applied Remote Sensing, EURAC research</gco:CharacterString>
+
+					</gmd:organisationName>
+					<gmd:positionName gco:nilReason="missing">
+
+						<gco:CharacterString>Researcher</gco:CharacterString>
+
+					</gmd:positionName>
+					<gmd:contactInfo>
+
+						<gmd:CI_Contact>
+
+							<gmd:phone>
+
+								<gmd:CI_Telephone/>
+
+							</gmd:phone>
+							<gmd:address>
+
+								<gmd:CI_Address>
+
+									<gmd:deliveryPoint>
+
+										<gco:CharacterString>Viale Druso, 1 / Drususallee 1, EURAC research</gco:CharacterString>
+
+									</gmd:deliveryPoint>
+									<gmd:city>
+
+										<gco:CharacterString>Bolzano</gco:CharacterString>
+
+									</gmd:city>
+									<gmd:administrativeArea>
+
+										<gco:CharacterString>Autonomous Province of Bolzano</gco:CharacterString>
+
+									</gmd:administrativeArea>
+									<gmd:postalCode>
+
+										<gco:CharacterString>39100</gco:CharacterString>
+
+									</gmd:postalCode>
+									<gmd:country>
+
+										<gco:CharacterString>Italy</gco:CharacterString>
+
+									</gmd:country>
+									<gmd:electronicMailAddress>
+
+										<gco:CharacterString>remote.sensing@eurac.edu</gco:CharacterString>
+
+									</gmd:electronicMailAddress>
+
+								</gmd:CI_Address>
+
+							</gmd:address>
+							<gmd:onlineResource>
+
+								<gmd:CI_OnlineResource>
+
+									<gmd:linkage>
+
+										<gmd:URL>http://www.eurac.edu/en/research/institutes/remotesensing/default.html</gmd:URL>
+
+									</gmd:linkage>
+									<gmd:protocol>
+
+										<gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+
+									</gmd:protocol>
+									<gmd:name>
+
+										<gco:CharacterString>EURAC research</gco:CharacterString>
+
+									</gmd:name>
+									<gmd:function>
+
+										<gmd:CI_OnLineFunctionCode codeList="" codeListValue="information"/>
+
+									</gmd:function>
+
+								</gmd:CI_OnlineResource>
+
+							</gmd:onlineResource>
+
+						</gmd:CI_Contact>
+
+					</gmd:contactInfo>
+					<gmd:role>
+
+						<gmd:CI_RoleCode codeListValue="originator" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_RoleCode"/>
+
+					</gmd:role>
+
+				</gmd:CI_ResponsibleParty>
+
+			</gmd:pointOfContact>
+			<gmd:resourceMaintenance>
+
+				<gmd:MD_MaintenanceInformation>
+
+					<gmd:maintenanceAndUpdateFrequency>
+
+						<gmd:MD_MaintenanceFrequencyCode codeListValue="asNeeded" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_MaintenanceFrequencyCode"/>
+
+					</gmd:maintenanceAndUpdateFrequency>
+
+				</gmd:MD_MaintenanceInformation>
+
+			</gmd:resourceMaintenance>
+			<gmd:graphicOverview>
+
+				<gmd:MD_BrowseGraphic>
+
+					<gmd:fileName gco:nilReason="missing">
+
+						<gco:CharacterString/>
+
+					</gmd:fileName>
+					<gmd:fileDescription>
+
+						<gco:CharacterString>thumbnail</gco:CharacterString>
+
+					</gmd:fileDescription>
+
+				</gmd:MD_BrowseGraphic>
+
+			</gmd:graphicOverview>
+			<gmd:graphicOverview>
+
+				<gmd:MD_BrowseGraphic>
+
+					<gmd:fileName gco:nilReason="missing">
+
+						<gco:CharacterString/>
+
+					</gmd:fileName>
+					<gmd:fileDescription>
+
+						<gco:CharacterString>large_thumbnail</gco:CharacterString>
+
+					</gmd:fileDescription>
+
+				</gmd:MD_BrowseGraphic>
+
+			</gmd:graphicOverview>
+			<gmd:descriptiveKeywords>
+
+				<gmd:MD_Keywords>
+
+					<gmd:keyword>
+
+						<gco:CharacterString xmlns:gmx="http://www.isotc211.org/2005/gmx">Environmental monitoring facilities</gco:CharacterString>
+
+					</gmd:keyword>
+					<gmd:type>
+
+						<gmd:MD_KeywordTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme"/>
+
+					</gmd:type>
+					<gmd:thesaurusName>
+
+						<gmd:CI_Citation>
+
+							<gmd:title>
+
+								<gco:CharacterString>GEMET - INSPIRE themes, version 1.0</gco:CharacterString>
+
+							</gmd:title>
+							<gmd:date gco:nilReason="missing"/>
+							<gmd:edition>
+
+								<gco:CharacterString>http://geonetwork-opensource.org/inspire-theme</gco:CharacterString>
+
+							</gmd:edition>
+							<gmd:editionDate>
+
+								<gco:Date>2008-06-01</gco:Date>
+
+							</gmd:editionDate>
+							<gmd:identifier>
+
+								<gmd:MD_Identifier>
+
+									<gmd:code>
+
+										<gco:CharacterString xmlns:gmx="http://www.isotc211.org/2005/gmx">geonetwork.thesaurus.external.theme.inspire-theme</gco:CharacterString>
+
+									</gmd:code>
+
+								</gmd:MD_Identifier>
+
+							</gmd:identifier>
+
+						</gmd:CI_Citation>
+
+					</gmd:thesaurusName>
+
+				</gmd:MD_Keywords>
+
+			</gmd:descriptiveKeywords>
+			<gmd:descriptiveKeywords>
+
+				<gmd:MD_Keywords>
+
+					<gmd:keyword>
+
+						<gco:CharacterString>South Tyrol</gco:CharacterString>
+
+					</gmd:keyword>
+					<gmd:keyword>
+
+						<gco:CharacterString>raster</gco:CharacterString>
+
+					</gmd:keyword>
+					<gmd:keyword>
+
+						<gco:CharacterString>grid</gco:CharacterString>
+
+					</gmd:keyword>
+					<gmd:type>
+
+						<gmd:MD_KeywordTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme"/>
+
+					</gmd:type>
+
+				</gmd:MD_Keywords>
+
+			</gmd:descriptiveKeywords>
+			<gmd:resourceConstraints>
+
+				<gmd:MD_LegalConstraints>
+
+					<gmd:accessConstraints>
+
+						<gmd:MD_RestrictionCode codeListValue="" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_RestrictionCode"/>
+
+					</gmd:accessConstraints>
+					<gmd:useConstraints>
+
+						<gmd:MD_RestrictionCode codeListValue="" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_RestrictionCode"/>
+
+					</gmd:useConstraints>
+					<gmd:otherConstraints gco:nilReason="missing">
+
+						<gco:CharacterString/>
+
+					</gmd:otherConstraints>
+
+				</gmd:MD_LegalConstraints>
+
+			</gmd:resourceConstraints>
+			<gmd:spatialRepresentationType>
+
+				<gmd:MD_SpatialRepresentationTypeCode codeListValue="grid" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_SpatialRepresentationTypeCode"/>
+
+			</gmd:spatialRepresentationType>
+			<gmd:spatialResolution>
+
+				<gmd:MD_Resolution>
+
+					<gmd:distance>
+
+						<gco:Distance uom="meter">6.5</gco:Distance>
+
+					</gmd:distance>
+
+				</gmd:MD_Resolution>
+
+			</gmd:spatialResolution>
+			<gmd:spatialResolution>
+
+				<gmd:MD_Resolution>
+
+					<gmd:equivalentScale>
+
+						<gmd:MD_RepresentativeFraction>
+
+							<gmd:denominator>
+
+								<gco:Integer>5000</gco:Integer>
+
+							</gmd:denominator>
+
+						</gmd:MD_RepresentativeFraction>
+
+					</gmd:equivalentScale>
+
+				</gmd:MD_Resolution>
+
+			</gmd:spatialResolution>
+			<gmd:language>
+
+				<gmd:LanguageCode xmlns:gmx="http://www.isotc211.org/2005/gmx" codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng"/>
+
+			</gmd:language>
+			<gmd:characterSet>
+
+				<gmd:MD_CharacterSetCode codeListValue="utf8" codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_CharacterSetCode"/>
+
+			</gmd:characterSet>
+			<gmd:topicCategory>
+
+				<gmd:MD_TopicCategoryCode>boundaries</gmd:MD_TopicCategoryCode>
+
+			</gmd:topicCategory>
+			<gmd:topicCategory>
+
+				<gmd:MD_TopicCategoryCode>environment</gmd:MD_TopicCategoryCode>
+
+			</gmd:topicCategory>
+			<gmd:environmentDescription>
+
+				<gco:CharacterString>environment</gco:CharacterString>
+
+			</gmd:environmentDescription>
+			<gmd:extent>
+
+				<gmd:EX_Extent>
+
+					<gmd:temporalElement>
+
+						<gmd:EX_TemporalExtent>
+
+							<gmd:extent>
+
+								<gml:TimePeriod gml:id="d1e468a1049886">
+
+									<gml:beginPosition>2014-01-10T00:00:00</gml:beginPosition>
+									<gml:endPosition>2014-01-24T00:00:00</gml:endPosition>
+
+								</gml:TimePeriod>
+
+							</gmd:extent>
+
+						</gmd:EX_TemporalExtent>
+
+					</gmd:temporalElement>
+
+				</gmd:EX_Extent>
+
+			</gmd:extent>
+			<gmd:extent>
+
+				<gmd:EX_Extent>
+
+					<gmd:geographicElement>
+
+						<gmd:EX_GeographicBoundingBox>
+
+							<gmd:westBoundLongitude>
+
+								<gco:Decimal>7.112663145280241</gco:Decimal>
+
+							</gmd:westBoundLongitude>
+							<gmd:eastBoundLongitude>
+
+								<gco:Decimal>14.451530331758462</gco:Decimal>
+
+							</gmd:eastBoundLongitude>
+							<gmd:southBoundLatitude>
+
+								<gco:Decimal>44.88662695598289</gco:Decimal>
+
+							</gmd:southBoundLatitude>
+							<gmd:northBoundLatitude>
+
+								<gco:Decimal>47.82754285438444</gco:Decimal>
+
+							</gmd:northBoundLatitude>
+
+						</gmd:EX_GeographicBoundingBox>
+
+					</gmd:geographicElement>
+
+				</gmd:EX_Extent>
+
+			</gmd:extent>
+			<gmd:supplementalInformation>
+
+				<gco:CharacterString>Supplemental Information about the dataset</gco:CharacterString>
+
+			</gmd:supplementalInformation>
+
+		</gmd:MD_DataIdentification>
+
+	</gmd:identificationInfo>
+	<gmd:distributionInfo>
+
+		<gmd:MD_Distribution>
+
+			<gmd:distributionFormat>
+
+				<gmd:MD_Format>
+
+					<gmd:name>
+
+						<gco:CharacterString>GeoTIFF</gco:CharacterString>
+
+					</gmd:name>
+					<gmd:version>
+
+						<gco:CharacterString>1.0</gco:CharacterString>
+
+					</gmd:version>
+
+				</gmd:MD_Format>
+
+			</gmd:distributionFormat>
+			<gmd:transferOptions>
+
+				<gmd:MD_DigitalTransferOptions>
+
+					<gmd:onLine>
+
+						<gmd:CI_OnlineResource>
+
+							<gmd:linkage>
+
+								<gmd:URL>http://webgis.eurac.edu/geoserver/demo/wms?service=WMS&</gmd:URL>
+
+							</gmd:linkage>
+							<gmd:protocol>
+
+								<gco:CharacterString>OGC:WMS-1.1.1-http-get-map</gco:CharacterString>
+
+							</gmd:protocol>
+							<gmd:applicationProfile gco:nilReason="missing">
+
+								<gco:CharacterString/>
+
+							</gmd:applicationProfile>
+							<gmd:name>
+
+								<gco:CharacterString>demo:dem_brixen_10m_merc</gco:CharacterString>
+
+							</gmd:name>
+							<gmd:description>
+
+								<gco:CharacterString>DEM Brixen</gco:CharacterString>
+
+							</gmd:description>
+
+						</gmd:CI_OnlineResource>
+
+					</gmd:onLine>
+					<gmd:onLine>
+
+						<gmd:CI_OnlineResource>
+
+							<gmd:linkage>
+
+								<gmd:URL>http://pvalps.eurac.edu/en/Project/Documents/PVAlps-Flyer_A5-EN_final.pdf</gmd:URL>
+
+							</gmd:linkage>
+							<gmd:protocol>
+
+								<gco:CharacterString>WWW:LINK-1.0-http--related</gco:CharacterString>
+
+							</gmd:protocol>
+							<gmd:name>
+
+								<gco:CharacterString>Related link</gco:CharacterString>
+
+							</gmd:name>
+
+						</gmd:CI_OnlineResource>
+
+					</gmd:onLine>
+
+				</gmd:MD_DigitalTransferOptions>
+
+			</gmd:transferOptions>
+
+		</gmd:MD_Distribution>
+
+	</gmd:distributionInfo>
+	<gmd:dataQualityInfo>
+
+		<gmd:DQ_DataQuality>
+
+			<gmd:scope>
+
+				<gmd:DQ_Scope>
+
+					<gmd:level>
+
+						<gmd:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset"/>
+
+					</gmd:level>
+
+				</gmd:DQ_Scope>
+
+			</gmd:scope>
+			<gmd:report>
+
+				<gmd:DQ_DomainConsistency xsi:type="gmd:DQ_DomainConsistency_Type">
+
+					<gmd:measureIdentification>
+
+						<gmd:RS_Identifier>
+
+							<gmd:code xsi:type="gmd:PT_FreeText_PropertyType">
+
+								<gco:CharacterString>Conformity_001</gco:CharacterString>
+								<gmd:PT_FreeText>
+
+									<gmd:textGroup>
+
+										<gmd:LocalisedCharacterString locale="#ITA">Conformity_001</gmd:LocalisedCharacterString>
+
+									</gmd:textGroup>
+
+								</gmd:PT_FreeText>
+
+							</gmd:code>
+							<gmd:codeSpace>
+
+								<gco:CharacterString>INSPIRE</gco:CharacterString>
+
+							</gmd:codeSpace>
+
+						</gmd:RS_Identifier>
+
+					</gmd:measureIdentification>
+					<gmd:result>
+
+						<gmd:DQ_ConformanceResult xsi:type="gmd:DQ_ConformanceResult_Type">
+
+							<gmd:specification>
+
+								<gmd:CI_Citation>
+
+									<gmd:title xsi:type="gmd:PT_FreeText_PropertyType">
+
+										<gco:CharacterString>REGOLAMENTO CE N.1205/2008</gco:CharacterString>
+										<gmd:PT_FreeText>
+
+											<gmd:textGroup>
+
+												<gmd:LocalisedCharacterString locale="#ITA">REGOLAMENTO (CE) N.1205/2008 DELLA COMMISSIONE del 3 dicembre 2008 recante attuazione della direttiva 2007/2/CE del Parlamento europeo e del Consiglio per quanto riguarda i metadati</gmd:LocalisedCharacterString>
+
+											</gmd:textGroup>
+
+										</gmd:PT_FreeText>
+
+									</gmd:title>
+									<gmd:date>
+
+										<gmd:CI_Date>
+
+											<gmd:date>
+
+												<gco:Date>2010-12-08</gco:Date>
+
+											</gmd:date>
+											<gmd:dateType>
+
+												<gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication"/>
+
+											</gmd:dateType>
+
+										</gmd:CI_Date>
+
+									</gmd:date>
+
+								</gmd:CI_Citation>
+
+							</gmd:specification>
+							<gmd:explanation xsi:type="gmd:PT_FreeText_PropertyType">
+
+								<gco:CharacterString>See technical references</gco:CharacterString>
+								<gmd:PT_FreeText>
+
+									<gmd:textGroup>
+
+										<gmd:LocalisedCharacterString locale="#ITA">Vedi specifiche di riferimento</gmd:LocalisedCharacterString>
+
+									</gmd:textGroup>
+									<gmd:textGroup>
+
+										<gmd:LocalisedCharacterString locale="#GER">Siehe technische Referenz</gmd:LocalisedCharacterString>
+
+									</gmd:textGroup>
+
+								</gmd:PT_FreeText>
+
+							</gmd:explanation>
+							<gmd:pass/>
+
+						</gmd:DQ_ConformanceResult>
+
+					</gmd:result>
+
+				</gmd:DQ_DomainConsistency>
+
+			</gmd:report>
+			<gmd:lineage>
+
+				<gmd:LI_Lineage>
+
+					<gmd:statement>
+
+						<gco:CharacterString>Information or lack of information on the events and source data use to construct the dataset within the specified Scope. Specify the processing here.</gco:CharacterString>
+
+					</gmd:statement>
+
+				</gmd:LI_Lineage>
+
+			</gmd:lineage>
+
+		</gmd:DQ_DataQuality>
+
+	</gmd:dataQualityInfo>
+	<gmi:acquisitionInfo>
+
+		<gmi:MI_AcquisitionInformation>
+
+			<gmi:instrument>
+
+				<gmi:MI_Instrument>
+
+					<gmi:citation/>
+					<gmi:identifier>
+
+						<gmd:MD_Identifier>
+
+							<gmd:authority/>
+							<gmd:code>
+
+								<gco:CharacterString>template</gco:CharacterString>
+
+							</gmd:code>
+
+						</gmd:MD_Identifier>
+
+					</gmi:identifier>
+					<gmi:type>
+
+						<gco:CharacterString>template</gco:CharacterString>
+
+					</gmi:type>
+					<gmi:description>
+
+						<gco:CharacterString>template</gco:CharacterString>
+
+					</gmi:description>
+					<gmi:mountedOn/>
+
+				</gmi:MI_Instrument>
+
+			</gmi:instrument>
+			<gmi:platform>
+
+				<gmi:MI_Platform>
+
+					<gmi:citation/>
+					<gmi:identifier>
+
+						<gmd:MD_Identifier>
+
+							<gmd:authority/>
+							<gmd:code>
+
+								<gco:CharacterString>template</gco:CharacterString>
+
+							</gmd:code>
+
+						</gmd:MD_Identifier>
+
+					</gmi:identifier>
+					<gmi:description>
+
+						<gco:CharacterString>template</gco:CharacterString>
+
+					</gmi:description>
+					<gmi:sponsor/>
+					<gmi:instrument/>
+
+				</gmi:MI_Platform>
+
+			</gmi:platform>
+
+		</gmi:MI_AcquisitionInformation>
+
+	</gmi:acquisitionInfo>
+
+</gmi:MI_Metadata>

@@ -436,8 +436,6 @@
 			</xsl:call-template>-->
 			
 			<xsl:when test="$currTab='ISOMinimum'">
-			
-				</xsl:message>
 				<xsl:call-template name="inspiretabs">
 					<xsl:with-param name="schema" select="$schema"/>
 					<xsl:with-param name="edit" select="$edit"/>
