@@ -108,13 +108,8 @@
 	<organisation>Organisation</organisation>
 	<individual>Individual</individual>
   <euracTabTech>Technical info.</euracTabTech>
-  <acquisitionInfoTab>Acquisition info.</acquisitionInfoTab>
-  <!-- gmi new  -->
-  <gmiTab>Core view</gmiTab>
-  <gmiTabDesc>Description</gmiTabDesc>
-  <gmiTabTech>Technical info.</gmiTabTech>
-  <gmiTabQua>Quality</gmiTabQua>
-  <gmiTabAcc>Access constraints</gmiTabAcc>
-  <gmiTabMd>Metadata xxxxxxx </gmiTabMd>
-  <gmiExtraMD>MI extra Metadata</gmiExtraMD>
+  <!-- Translation for additional tabs -->
+	<!-- Should be removed once in GN it is fixed
+	<acquisitionInfoTab>Aquisizione</acquisitionInfoTab>
+	-->
 </strings>
