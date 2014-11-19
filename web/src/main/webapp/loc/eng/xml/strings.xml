@@ -342,6 +342,7 @@
 	<about>About</about>
 	<abstract>Abstract</abstract>
 	<accept>Accept</accept>
+	<acquisitionInfoTab>Acquisition</acquisitionInfoTab> <!-- RT#53364 -->
 	<actionOnSelect>actions on selection</actionOnSelect>
 	<add js="true">add</add>
 	<addNewMetadata>Add new metadata</addNewMetadata>

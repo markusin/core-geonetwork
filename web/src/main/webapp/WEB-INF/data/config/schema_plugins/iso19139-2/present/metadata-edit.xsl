@@ -21,15 +21,15 @@
 
 	<!-- main template - the way into processing iso19139-2 -->
 	<xsl:template name="metadata-iso19139-2">
-		<xsl:param name="schema" />
-		<xsl:param name="edit" select="false()" />
-		<xsl:param name="embedded" />
+		<xsl:param name="schema"/>
+		<xsl:param name="edit" select="false()"/>
+		<xsl:param name="embedded"/>
 
 		<!-- apply iso19139 located in iso19139 -->
 		<xsl:apply-templates mode="iso19139" select=".">
-			<xsl:with-param name="schema" select="$schema" />
-			<xsl:with-param name="edit" select="$edit" />
-			<xsl:with-param name="embedded" select="$embedded" />
+			<xsl:with-param name="schema" select="$schema"/>
+			<xsl:with-param name="edit" select="$edit"/>
+			<xsl:with-param name="embedded" select="$embedded"/>
 		</xsl:apply-templates>
 	</xsl:template>
 
@@ -94,13 +94,6 @@
 		<xsl:param name="embedded" />
 
 		<xsl:variable name="dataset" select="gmd:hierarchyLevel/gmd:MD_ScopeCode/@codeListValue='dataset' or normalize-space(gmd:hierarchyLevel/gmd:MD_ScopeCode/@codeListValue)=''" />
-
-
-		<xsl:message>
-			------ EDIT: Current tab is
-			<xsl:value-of select="$currTab" />
-		</xsl:message>
-
 
 		<xsl:choose>
 			<!-- metadata tab -->
@@ -263,7 +256,11 @@
 	</xsl:template>
 
 
-	<!-- Brief template <xsl:template name="iso19139-2Brief"> <xsl:call-template name="iso19139Brief" /> </xsl:template> -->
+	<!-- Brief template 
+	<xsl:template name="iso19139-2Brief">
+		<xsl:call-template name="iso19139Brief" />
+	</xsl:template>
+	-->
 
 	<xsl:template name="iso19139-2-javascript" />
 

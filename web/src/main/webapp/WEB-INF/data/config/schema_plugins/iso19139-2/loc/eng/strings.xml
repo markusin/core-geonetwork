@@ -104,9 +104,11 @@
 	<taxonSearch>Search APC/AFD for Taxonomic Names</taxonSearch>
 	<temporalExtent>Time Span:</temporalExtent>
 	<uuid>Universal Unique Identifier (UUID)</uuid>
-	<xml_iso19139-2>Save this metadata as an ISO19139-2 /Eurac Community Profile XML file</xml_iso19139-2>
+	<xml_iso19139-2>Save this metadata as an ISO19139-2 XML file</xml_iso19139-2>
 	<organisation>Organisation</organisation>
 	<individual>Individual</individual>
-  <euracTabTech>Technical info.</euracTabTech>
-  <acquisitionInfoTab>Acquisition</acquisitionInfoTab>
+	<!-- Translation for additional tabs -->
+	<!-- Should be removed once in GN it is fixed
+	<acquisitionInfoTab>Acquisition</acquisitionInfoTab>
+	-->
 </strings>

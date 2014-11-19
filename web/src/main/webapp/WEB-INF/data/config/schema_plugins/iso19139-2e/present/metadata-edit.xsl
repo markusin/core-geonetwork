@@ -49,27 +49,62 @@
 		<xsl:param name="tabLink"/>
 		<xsl:param name="schema"/>
 			
-		<!-- Preserve iso19139 complete tabs -->
-		<xsl:call-template name="iso19139CompleteTab">
-			<xsl:with-param name="tabLink" select="$tabLink" />
-			<xsl:with-param name="schema" select="$schema" />
-		</xsl:call-template>		
+		<xsl:if test="/root/gui/env/inspire/enable = 'true' and /root/gui/env/metadata/enableInspireView = 'true'">
+		  <xsl:call-template name="mainTab">
+		    <xsl:with-param name="title" select="/root/gui/strings/inspireTab"/>
+		    <xsl:with-param name="default">inspire</xsl:with-param>
+		    <xsl:with-param name="menu">
+		      <item label="inspireTab">inspire</item>
+		    </xsl:with-param>
+		  </xsl:call-template>
+		</xsl:if>
+		
+		<xsl:if test="/root/gui/env/metadata/enableIsoView = 'true'">
+		  <xsl:call-template name="mainTab">
+		    <xsl:with-param name="title" select="/root/gui/strings/byGroup"/>
+		    <xsl:with-param name="default">ISOCore</xsl:with-param>
+		    <xsl:with-param name="menu">
+		      <item label="isoMinimum">ISOMinimum</item>
+		      <item label="isoCore">ISOCore</item>
+		      <item label="isoAll">ISOAll</item>
+		    </xsl:with-param>
+		  </xsl:call-template>
+		 </xsl:if>
+		
+		<xsl:if test="/root/gui/config/metadata-tab/advanced">
+		  <xsl:call-template name="mainTab">
+		    <xsl:with-param name="title" select="/root/gui/strings/byPackage"/>
+		    <xsl:with-param name="default">identification</xsl:with-param>
+		    <xsl:with-param name="menu">
+		      <item label="metadata">metadata</item>
+		      <item label="identificationTab">identification</item>
+		      <item label="maintenanceTab">maintenance</item>
+		      <item label="constraintsTab">constraints</item>
+		      <item label="spatialTab">spatial</item>
+		      <item label="refSysTab">refSys</item>
+		      <item label="distributionTab">distribution</item>
+		      <item label="dataQualityTab">dataQuality</item>
+		      <item label="appSchInfoTab">appSchInfo</item>
+		      <item label="porCatInfoTab">porCatInfo</item>
+		      <item label="contentInfoTab">contentInfo</item>
+		      <item label="acquisitionInfoTab">acquisitionInfo</item>
+		      <item label="extensionInfoTab">extensionInfo</item>
+		    </xsl:with-param>
+		  </xsl:call-template>
+		</xsl:if>
 	</xsl:template>
 	<!-- RT#53364 InM end -->
-		
-	
-	
+
+
 	<!-- Redirection template for profil gmie in order to process extraTabs. -->
 	<xsl:template mode="iso19139" match="gmie:MIE_Metadata" priority="200">
 		<xsl:param name="schema"/>
 		<xsl:param name="edit"/>
 		<xsl:param name="embedded"/>
 		
-		<xsl:variable name="dataset"
-			select="gmd:hierarchyLevel/gmd:MD_ScopeCode/@codeListValue='dataset' or normalize-space(gmd:hierarchyLevel/gmd:MD_ScopeCode/@codeListValue)=''"/>
-				
+		<xsl:variable name="dataset" select="gmd:hierarchyLevel/gmd:MD_ScopeCode/@codeListValue='dataset' or normalize-space(gmd:hierarchyLevel/gmd:MD_ScopeCode/@codeListValue)=''"/>
+
 		<xsl:choose>
-			
 			<!-- metadata tab -->
 			<xsl:when test="$currTab='metadata'">
 				<xsl:call-template name="iso19139Metadata">
@@ -236,7 +271,7 @@
 		<xsl:call-template name="iso19139Brief" />
 	</xsl:template>
 	-->
-	
+
 	<xsl:template name="iso19139-2e-javascript"/>
-	
+
 </xsl:stylesheet>

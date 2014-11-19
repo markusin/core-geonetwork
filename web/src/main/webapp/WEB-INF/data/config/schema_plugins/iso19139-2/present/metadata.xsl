@@ -180,7 +180,6 @@
 		<xsl:param name="edit" />
 		<xsl:param name="embedded" />
 		
-		<xsl:message>------ Current tab is <xsl:value-of select="$currTab"/></xsl:message>
 
 		<xsl:variable name="dataset"
 			select="gmd:hierarchyLevel/gmd:MD_ScopeCode/@codeListValue='dataset' or normalize-space(gmd:hierarchyLevel/gmd:MD_ScopeCode/@codeListValue)=''" />
