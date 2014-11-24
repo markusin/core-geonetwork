@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<ViewContext version="1.1.0" id="OpenLayers_Context_1278" 
+	xmlns="http://www.opengis.net/context"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:sld="http://www.opengis.net/sld"
+	xsi:schemaLocation="http://www.opengis.net/context http://schemas.opengis.net/context/1.1.0/context.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<General>
+		<Window width="973" height="741" />
+		<BoundingBox minx="-180" miny="-90" maxx="180" maxy="90" SRS="EPSG:4326" />
+		<Title>Default layers for Spatial Catalog - EURAC</Title>
+		<KeywordList>
+			<Keyword>Base layers</Keyword>
+			<Keyword>Spatial catalog</Keyword>
+			<Keyword>SDI</Keyword>
+		</KeywordList>
+		<LogoURL>
+			<OnlineResource xlink:type="simple" xlink:href="http://webgis.eurac.edu/icons/EURAC_SDI.png" />
+		</LogoURL>
+		<ContactInformation>
+			<ContactPersonPrimary>
+				<ContactOrganization>EURAC Research</ContactOrganization>
+			</ContactPersonPrimary>
+		</ContactInformation>
+	</General>
+	<LayerList>
+		<Layer queryable="1" hidden="0">
+			<Server service="OGC:WMS" version="1.1.1" title="ESA CubeSERV">
+				<OnlineResource xlink:type="simple" xlink:href="http://mapserv2.esrin.esa.it/cubestor/cubeserv/cubeserv.cgi" />
+			</Server>
+			<Name>WORLD_MODIS_1KM:MapAdmin</Name>
+			<Title>WORLD_MODIS_1KM</Title>
+			<Abstract>Global maps derived from various Earth Observation sensors / WORLD_MODIS_1KM:MapAdmin</Abstract>
+			<SRS>EPSG:4326</SRS>
+			<FormatList>
+				<Format current="1">image/png</Format>
+				<Format>image/gif</Format>
+				<Format>image/jpeg</Format>
+			</FormatList>
+			<StyleList>
+				<Style current="1">
+					<Name>default</Name>
+					<Title>default</Title>
+					<LegendURL width="16" height="16" format="image/gif">
+						<OnlineResource xlink:type="simple"
+							xlink:href="http://mapserv2.esrin.esa.it/cubestor/cubeserv/cubeserv.cgi?version=1.1.1&amp;request=GetLegendGraphic&amp;layer=WORLD_MODIS_1KM:MapAdmin&amp;style=default&amp;format=image/gif" />
+					</LegendURL>
+				</Style>
+			</StyleList>
+		</Layer>
+		<Layer queryable="0" hidden="0">
+			<Server service="OGC:WMS" version="1.1.1" title="The GLOBE Program Visualization Server">
+				<OnlineResource xlink:type="simple" xlink:href="http://globe.digitalearth.gov/viz-bin/wmt.cgi" />
+			</Server>
+			<Name>COASTLINES</Name>
+			<Title>Coastlines</Title>
+			<Abstract>Context layer: Coastlines</Abstract>
+			<SRS>EPSG:4326</SRS>
+			<FormatList>
+				<Format current="1">image/gif</Format>
+				<Format>image/png</Format>
+			</FormatList>
+			<StyleList>
+				<Style current="1">
+					<Name>default</Name>
+					<Title>Default</Title>
+					<LegendURL width="180" format="image/gif" height="50">
+						<OnlineResource xlink:type="simple" xlink:href="http://globe.digitalearth.gov/globe/en/icons/colorbars/COASTLINES.gif" />
+					</LegendURL>
+				</Style>
+			</StyleList>
+		</Layer>
+		<Layer queryable="1" hidden="0">
+			<Server service="OGC:WMS" version="1.1.1" title="The GLOBE Program Visualization Server">
+				<OnlineResource xlink:type="simple" xlink:href="http://globe.digitalearth.gov/viz-bin/wmt.cgi" />
+			</Server>
+			<Name>NATIONAL</Name>
+			<Title>National Boundaries</Title>
+			<Abstract>Context layer: National Boundaries</Abstract>
+			<SRS>EPSG:4326</SRS>
+			<FormatList>
+				<Format current="1">image/gif</Format>
+				<Format>image/png</Format>
+			</FormatList>
+			<StyleList>
+				<Style current="1">
+					<Name>default</Name>
+					<Title>Default</Title>
+					<LegendURL width="180" format="image/gif" height="50">
+						<OnlineResource xlink:type="simple" xlink:href="http://globe.digitalearth.gov/globe/en/icons/colorbars/NATIONAL.gif" />
+					</LegendURL>
+				</Style>
+			</StyleList>
+		</Layer>
+		<Layer queryable="1" hidden="0">
+			<Server service="OGC:WMS" version="1.1.1" title="Canada Centre for Remote Sensing Web Map Service">
+				<OnlineResource xlink:type="simple" xlink:href="http://ceoware2.ccrs.nrcan.gc.ca/cubewerx/cubeserv/cubeserv.cgi" />
+			</Server>
+			<Name>EOS_DATA_GATEWAYS:CEOWARE2</Name>
+			<Title>EOS Data Gateways</Title>
+			<Abstract>Locations of EOS Data Gateway Locations. The same services and data are available through each gateway location.</Abstract>
+			<sld:MinScaleDenominator>1000</sld:MinScaleDenominator>
+			<sld:MaxScaleDenominator>500000</sld:MaxScaleDenominator>
+			<SRS>EPSG:4326</SRS>
+			<FormatList>
+				<Format current="1">image/gif</Format>
+				<Format>image/png</Format>
+				<Format>image/jpeg</Format>
+			</FormatList>
+			<StyleList>
+				<Style current="1">
+					<Name>default</Name>
+					<Title>default</Title>
+					<LegendURL width="16" height="16" format="image/gif">
+						<OnlineResource xlink:type="simple"
+							xlink:href="http://ceoware2.ccrs.nrcan.gc.ca/cubewerx/cubeserv/cubeserv.cgi?version=1.1.1&amp;request=GetLegendGraphic&amp;layer=EOS_DATA_GATEWAYS:CEOWARE2&amp;style=default&amp;format=image/gif" />
+					</LegendURL>
+				</Style>
+			</StyleList>
+		</Layer>
+	</LayerList>
+</ViewContext>

@@ -48,12 +48,12 @@ if (useOSMLayers) {
     //GeoNetwork.map.EXTENT = new OpenLayers.Bounds(-550000, 5000000, 1200000, 7000000);
     GeoNetwork.map.EXTENT = new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34);
     GeoNetwork.map.BACKGROUND_LAYERS = [
-        new OpenLayers.Layer.OSM()
-        //new OpenLayers.Layer.Google("Google Streets");
+        new OpenLayers.Layer.OSM(),
+        new OpenLayers.Layer.Google("Google Streets")
     ];
 } else {
     GeoNetwork.map.BACKGROUND_LAYERS = [];
-    GeoNetwork.map.CONTEXT = "../../maps/mapviewer.wmc";
+    GeoNetwork.map.CONTEXT = "../../maps/maps_eurac.wmc";
     //GeoNetwork.map.OWS = "../../maps/demis.xml";
 }
 

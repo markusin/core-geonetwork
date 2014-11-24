@@ -53,7 +53,7 @@
 			<xs:element name="dataCategory" type="gco:CharacterString_PropertyType" minOccurs="0" />
 			<xs:element name="dataStatus" type="gco:CharacterString_PropertyType" minOccurs="0" />
 			<xs:element name="fileTypeVersion" type="gco:CharacterString_PropertyType" minOccurs="0" />
-			<xs:element name="additionalFiles" type="gmie:MIE_AdditionalFiles_Type" minOccurs="0" />
+			<xs:element name="additionalFiles" type="gmie:MIE_AdditionalFiles_PropertyType" minOccurs="0" />
 			<xs:element name="ancillaryData" type="gco:CharacterString_PropertyType" minOccurs="0" />
 			<xs:element name="ancillaryInputType" type="gco:CharacterString_PropertyType" minOccurs="0" />
 			<xs:element name="algorithmPackageMaturityCode" type="gco:CharacterString_PropertyType" minOccurs="0" />
@@ -161,8 +161,8 @@
 			<xs:documentation>The direction in which the satellite is moving. Ascending meens from south to north and Descending from north to south.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Ascending" />
-			<xs:enumeration value="Descending" />
+			<xs:enumeration value="ASCENDING" />
+			<xs:enumeration value="DESCENDING" />
 			<xs:enumeration value="N/A" />
 		</xs:restriction>
 	</xs:simpleType>
@@ -191,7 +191,7 @@
 			<xs:extension base="gmi:MI_Platform_Type">
 				<xs:sequence>
 					<xs:element name="platformName" type="gco:CharacterString_PropertyType" minOccurs="0" />
-					<xs:element name="orbitType" type="gco:CharacterString_PropertyType"/>
+					<xs:element name="orbitType" type="gco:CharacterString_PropertyType" minOccurs="0" />
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -216,8 +216,14 @@
 	</xs:complexType>
 	<!--....................................................................... -->
 	<xs:element name="MIE_AdditionalFiles" type="gmie:MIE_AdditionalFiles_Type" />
-	<!-- =========================================================================== -->
-
+	<!--....................................................................... -->
+	<xs:complexType name="MIE_AdditionalFiles_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmie:MIE_AdditionalFiles"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
 </xs:schema>
 	
 	
