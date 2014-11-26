@@ -47,8 +47,11 @@
 	<system systemId="http://www.opengis.net/gml/gml.xsd"
 		uri="schema/gml/gml.xsd"/>
 	<!-- xlinks -->
-
-	<system systemId="http://www.w3.org/1999/xlink/xlinks.xsd" 
-	        uri="schema/xlink/xlinks.xsd"/>
+	<system systemId="http://www.w3.org/1999/xlink/xlinks.xsd" uri="schema/xlink/xlinks.xsd"/>
+	<!-- iso19139-2 -->
+	<system systemId="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmi/gmi.xsd" uri="schema/gmi/gmi.xsd"/>
+	<!-- iso19139-2e -->
+	<system systemId="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmie/gmie.xsd" uri="schema/gmie/gmie.xsd"/> 
+	<!-- <system systemId="http://sdi.eurac.edu/metadata/iso19139-2/schema/gmie/gmie" uri="schema/gmie/gmie.xsd"/> -->
 
 </catalog>
